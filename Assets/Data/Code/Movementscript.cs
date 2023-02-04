@@ -7,14 +7,14 @@ public class Movementscript : MonoBehaviour
     public float JumpForce;
     public float MoveSpeed;
     public Rigidbody2D RigidBody2D;
-    float Root = 1;
-    float RootCounter = 0;
+    public float Root ;
     bool isGrounded = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        InvokeRepeating("Rooting", 2f, 2f);
         RigidBody2D = GetComponent<Rigidbody2D>();
     }
 
@@ -25,19 +25,11 @@ public class Movementscript : MonoBehaviour
         {
             Root = 0;
         }
-        if (isGrounded == true)
-        {
-            RootCounter++;
-        }
-        if (RootCounter == 15)
-        {
-            Root -= 0.1f;
-            RootCounter = 0;
-        }
-        float Speed = Input.GetAxis("Horizontal") * MoveSpeed;
+        
+        float Speed = Input.GetAxis("Horizontal") * MoveSpeed * Root * 2;
         if (Input.GetButtonDown("Jump") == true && isGrounded == true)
         {
-            float Jump = JumpForce * Root;
+            float Jump = (JumpForce * Root) + (JumpForce * 0.2f);
             RigidBody2D.velocity = new Vector3(Speed, Jump, 0);
             Root = 1; 
         }
@@ -48,12 +40,19 @@ public class Movementscript : MonoBehaviour
         }
         if (Input.GetAxis("Vertical") == -1)
         {
-            Root -= 0.01f;
+            Root -= 0.001f;
         }
 
 
 
 
+    }
+    void Rooting() 
+    {
+        if (isGrounded == true)
+        {
+            Root -= 0.1f;
+        }
     }
     void OnCollisionStay2D(Collision2D col)
     {
