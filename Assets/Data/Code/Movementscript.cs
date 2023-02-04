@@ -7,7 +7,7 @@ public class Movementscript : MonoBehaviour
     public float JumpForce;
     public float MoveSpeed;
     public Rigidbody2D RigidBody2D;
-    float Root = 1;
+    public float Root;
     float RootCounter = 0;
     bool isGrounded = false;
 
@@ -29,7 +29,7 @@ public class Movementscript : MonoBehaviour
         {
             RootCounter++;
         }
-        if (RootCounter == 15)
+        if (RootCounter == 100)
         {
             Root -= 0.1f;
             RootCounter = 0;
