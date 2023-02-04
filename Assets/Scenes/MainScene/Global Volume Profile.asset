@@ -13,55 +13,39 @@ MonoBehaviour:
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
     m_Value: 2
   gaussianStart:
     m_OverrideState: 0
-    m_Value: 10
-    min: 0
+    m_Value: 10.2
   gaussianEnd:
     m_OverrideState: 0
-    m_Value: 30
-    min: 0
+    m_Value: 18.05
   gaussianMaxRadius:
     m_OverrideState: 0
     m_Value: 1
-    min: 0.5
-    max: 1.5
   highQualitySampling:
     m_OverrideState: 0
     m_Value: 0
   focusDistance:
     m_OverrideState: 1
     m_Value: 2.02
-    min: 0.1
   aperture:
     m_OverrideState: 1
-    m_Value: 12.3
-    min: 1
-    max: 32
+    m_Value: 14.2
   focalLength:
     m_OverrideState: 1
-    m_Value: 40
-    min: 1
-    max: 300
+    m_Value: 133
   bladeCount:
     m_OverrideState: 1
     m_Value: 5
-    min: 3
-    max: 9
   bladeCurvature:
     m_OverrideState: 1
     m_Value: 0.526
-    min: 0
-    max: 1
   bladeRotation:
     m_OverrideState: 1
     m_Value: 70
-    min: -180
-    max: 180
 --- !u!114 &-1960095869214086796
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -75,12 +59,9 @@ MonoBehaviour:
   m_Name: ChromaticAberration
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
     m_Value: 0.044
-    min: 0
-    max: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,31 +92,21 @@ MonoBehaviour:
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
   active: 0
-  m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 0
     m_Value: 0
   contrast:
     m_OverrideState: 0
     m_Value: 0
-    min: -100
-    max: 100
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
-    hdr: 1
-    showAlpha: 0
-    showEyeDropper: 1
   hueShift:
     m_OverrideState: 0
     m_Value: 180
-    min: -180
-    max: 180
   saturation:
     m_OverrideState: 0
     m_Value: 25
-    min: -100
-    max: 100
 --- !u!114 &8443429580820122850
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -149,42 +120,31 @@ MonoBehaviour:
   m_Name: Bloom
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
     m_Value: 0.92
-    min: 0
   intensity:
     m_OverrideState: 1
     m_Value: 1
-    min: 0
   scatter:
     m_OverrideState: 1
     m_Value: 1
-    min: 0
-    max: 1
   clamp:
     m_OverrideState: 0
     m_Value: 65472
-    min: 0
   tint:
     m_OverrideState: 1
     m_Value: {r: 1, g: 0.11348411, b: 0, a: 1}
-    hdr: 0
-    showAlpha: 0
-    showEyeDropper: 1
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 0
   skipIterations:
     m_OverrideState: 0
     m_Value: 1
-    min: 0
-    max: 16
   dirtTexture:
     m_OverrideState: 1
     m_Value: {fileID: 2800000, guid: ae2a6a6f884a13a408d6d44405ca9c35, type: 3}
+    dimension: 1
   dirtIntensity:
     m_OverrideState: 1
     m_Value: 1
-    min: 0
