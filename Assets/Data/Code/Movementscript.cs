@@ -21,6 +21,10 @@ public class Movementscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Root < 0)
+        {
+            Root = 0;
+        }
         if (isGrounded == true)
         {
             RootCounter++;
@@ -39,7 +43,8 @@ public class Movementscript : MonoBehaviour
         }
         else
         {
-            RigidBody2D.velocity = new Vector3(Speed, 0, 0);
+            Vector2 forward = new Vector2(Speed, 0);
+            RigidBody2D.AddForce(forward) ;
         }
         if (Input.GetAxis("Vertical") == -1)
         {
@@ -50,14 +55,14 @@ public class Movementscript : MonoBehaviour
 
 
     }
-    void OnCollisionStay(Collision col)
+    void OnCollisionStay2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground")
         {
             isGrounded = true;
         }
     }
-    void OnCollisionExit(Collision col)
+    void OnCollisionExit2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground")
         {
