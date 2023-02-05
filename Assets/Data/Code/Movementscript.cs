@@ -8,8 +8,7 @@ public class Movementscript : MonoBehaviour
     public float MoveSpeed;
     public Rigidbody2D RigidBody2D;
     public float Root ;
-    bool isGrounded = false;
-
+    public bool isGrounded = false;
 
     // Start is called before the first frame update
     void Start()
