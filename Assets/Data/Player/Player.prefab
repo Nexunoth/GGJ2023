@@ -285,12 +285,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 2
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: ba5b58ffc293e684eac0198d459aadd7, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &691516872594194659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,10 +303,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a37eb092b6e990440935632ba2739b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 44
+  JumpForce: 34
   MoveSpeed: 4
   RigidBody2D: {fileID: 7675935540744589575}
-  Root: 0
+  Root: 1
+  isGrounded: 0
 --- !u!114 &176256281232031993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a81063b3f110a47b9a4b448b8d169a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RigidBody2D: {fileID: 7675935540744589575}
+  MovementScript: {fileID: 691516872594194659}
+  Animator: {fileID: 7574423318395731821}
 --- !u!95 &7574423318395731821
 Animator:
   serializedVersion: 4

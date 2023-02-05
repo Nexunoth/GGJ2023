@@ -13,7 +13,7 @@ TagManager:
   - Water
   - UI
   - PostProcessing
-  - 
+  - BlurForeground
   - 
   - 
   - 
@@ -65,4 +65,7 @@ TagManager:
     locked: 0
   - name: 01
     uniqueID: 2527904391
+    locked: 0
+  - name: 00
+    uniqueID: 667861117
     locked: 0
