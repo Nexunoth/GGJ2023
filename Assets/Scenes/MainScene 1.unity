@@ -4069,6 +4069,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1952222416 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7574423318395731821, guid: ff2c43c092b11b74e9fd1c426f8d6d30, type: 3}
+  m_PrefabInstance: {fileID: 7675935540980392144}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1952222417 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 691516872594194659, guid: ff2c43c092b11b74e9fd1c426f8d6d30, type: 3}
+  m_PrefabInstance: {fileID: 7675935540980392144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a37eb092b6e990440935632ba2739b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &1952222418 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7675935540744589575, guid: ff2c43c092b11b74e9fd1c426f8d6d30, type: 3}
+  m_PrefabInstance: {fileID: 7675935540980392144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1983094776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2089383657894417149, guid: a44c01d20d967004d832379b722c3301, type: 3}
@@ -5286,9 +5307,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 176256281232031993, guid: ff2c43c092b11b74e9fd1c426f8d6d30, type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 1952222416}
+    - target: {fileID: 176256281232031993, guid: ff2c43c092b11b74e9fd1c426f8d6d30, type: 3}
+      propertyPath: RigidBody2D
+      value: 
+      objectReference: {fileID: 1952222418}
+    - target: {fileID: 176256281232031993, guid: ff2c43c092b11b74e9fd1c426f8d6d30, type: 3}
+      propertyPath: MovementScript
+      value: 
+      objectReference: {fileID: 1952222417}
     - target: {fileID: 691516872594194659, guid: ff2c43c092b11b74e9fd1c426f8d6d30, type: 3}
       propertyPath: Root
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 691516872594194659, guid: ff2c43c092b11b74e9fd1c426f8d6d30, type: 3}
+      propertyPath: JumpForce
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1022275252222564028, guid: ff2c43c092b11b74e9fd1c426f8d6d30, type: 3}
       propertyPath: m_LocalScale.x
